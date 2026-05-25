@@ -1,0 +1,29 @@
+{
+  "version": 2,
+  "name": "varshith-portfolio",
+  "cleanUrls": true,
+  "headers": [
+    {
+      "source": "/(.*).(css|js)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/Varshith_resume.pdf",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/pdf"
+        },
+        {
+          "key": "Content-Disposition",
+          "value": "inline; filename=\"Varshith_resume.pdf\""
+        }
+      ]
+    }
+  ]
+}

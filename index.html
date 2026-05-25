@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dongari Naga Varshith - Software Engineer Portfolio</title>
+    
+    <!-- Meta SEO & Open Graph Tags -->
+    <meta name="description" content="Portfolio of Dongari Naga Varshith - Software Engineer & ML Specialist. Pursuing B.Tech in CSE at IIIT Sri City (CGPA: 9.61). Expert in NestJS, React, Python, and spatiotemporal ML modeling.">
+    <meta name="keywords" content="Dongari Naga Varshith, Varshith Dongari, IIIT Sri City, Portfolio, Full-Stack Developer, ML Engineer, NestJS, React, Python, Software Engineer Intern">
+    <meta name="author" content="Dongari Naga Varshith">
+    <meta property="og:title" content="Dongari Naga Varshith | Portfolio">
+    <meta property="og:description" content="Explore Varshith's developer portfolio, specializing in NestJS backends, spatiotemporal air quality models, and software engineering.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nagavarshith-portfolio.vercel.app">
+    <meta property="og:image" content="avatar_glowing.png">
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- External Icon Resources (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Interactive Floating Particle Canvas Background -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Navigation Header -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand"></div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="hamburger" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <!-- Textual Greeting content -->
+                <div class="hero-text-content">
+                    <span class="hero-title-greeting">Hi, I'm</span>
+                    <h1 class="hero-title-name">
+                        <span class="gradient-text">Dongari Naga</span><br>
+                        <span>Varshith</span>
+                    </h1>
+                    
+                    <div class="hero-subtitle-container">
+                        <span class="hero-subtitle-text"></span>
+                    </div>
+                    
+                    <p class="hero-description">
+                        Computer Science student at IIIT Sri City with strong foundations in backend development and machine learning. 
+                        Passionate about building scalable systems and data-driven applications, with a focus on clean architecture and efficient APIs.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn-premium btn-primary">
+                            <span>Explore Projects</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="Varshith_resume.pdf" download="Varshith_resume.pdf" class="btn-premium btn-secondary">
+                            <i class="fas fa-file-download"></i>
+                            <span>Get Resume PDF</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Beautiful Avatar tilt panel -->
+                <div class="hero-image-container">
+                    <div class="hero-tilt-card">
+                        <img src="avatar_glowing.png" alt="Futuristic Developer Visual" class="hero-avatar">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Skills Matrix (Search & Category Filters) -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-title-container">
+                <h2 class="section-title">Technical <span class="cyan-text">Skills</span></h2>
+                <p class="section-subtitle">A curated collection of languages, frameworks, core subjects, and tools.</p>
+            </div>
+
+            <!-- Interactivity Control Dashboard -->
+            <div class="skills-control-bar glass-panel">
+                <div class="skills-filter-pills">
+                    <button class="pill-btn active" data-filter="all">All Ecosystems</button>
+                    <button class="pill-btn" data-filter="languages">Languages</button>
+                    <button class="pill-btn" data-filter="backend">Backend</button>
+                    <button class="pill-btn" data-filter="ml-data">AI &amp; ML</button>
+                    <button class="pill-btn" data-filter="core-cs">Core CS</button>
+                    <button class="pill-btn" data-filter="tools">Tools</button>
+                </div>
+                <div class="skills-search-container">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="skills-search" class="skills-search-input" placeholder="Query a specific skill (e.g. NestJS)">
+                </div>
+            </div>
+
+            <!-- Skills List Grid -->
+            <div class="skills-grid">
+                <!-- Languages Category Card -->
+                <div class="skill-category-card glass-panel" data-category-group="languages">
+                    <h3 class="skill-category-title">
+                        <i class="fas fa-terminal"></i>
+                        <span>Languages</span>
+                    </h3>
+                    <div class="skills-tags-list">
+                        <div class="skill-item" data-category="languages">
+                            <i class="fas fa-code-branch" style="color:#00599c;"></i>
+                            <span>C++</span>
+                        </div>
+                        <div class="skill-item" data-category="languages">
+                            <i class="fab fa-python" style="color:#3776ab;"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-item" data-category="languages">
+                            <i class="fab fa-square-js" style="color:#eab308;"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-item" data-category="languages">
+                            <i class="fab fa-node" style="color:#2563eb;"></i>
+                            <span>TypeScript</span>
+                        </div>
+                        <div class="skill-item" data-category="languages">
+                            <i class="fab fa-java" style="color:#f89820;"></i>
+                            <span>Java</span>
+                        </div>
+                        <div class="skill-item" data-category="languages">
+                            <i class="fas fa-database" style="color:#00758f;"></i>
+                            <span>SQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend Category Card -->
+                <div class="skill-category-card glass-panel" data-category-group="backend">
+                    <h3 class="skill-category-title">
+                        <i class="fas fa-network-wired"></i>
+                        <span>Backend Development</span>
+                    </h3>
+                    <div class="skills-tags-list">
+                        <div class="skill-item" data-category="backend">
+                            <i class="fab fa-node-js" style="color:#68a063;"></i>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="skill-item" data-category="backend">
+                            <i class="fas fa-feather-alt" style="color:#e0234e;"></i>
+                            <span>NestJS</span>
+                        </div>
+                        <div class="skill-item" data-category="backend">
+                            <i class="fas fa-server" style="color:#2563eb;"></i>
+                            <span>REST APIs</span>
+                        </div>
+                        <div class="skill-item" data-category="backend">
+                            <i class="fas fa-database" style="color:#336791;"></i>
+                            <span>PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ML Category Card -->
+                <div class="skill-category-card glass-panel" data-category-group="ml-data">
+                    <h3 class="skill-category-title">
+                        <i class="fas fa-brain"></i>
+                        <span>Machine Learning &amp; Data</span>
+                    </h3>
+                    <div class="skills-tags-list">
+                        <div class="skill-item" data-category="ml-data">
+                            <i class="fas fa-chart-pie" style="color:#f89820;"></i>
+                            <span>Scikit-learn</span>
+                        </div>
+                        <div class="skill-item" data-category="ml-data">
+                            <i class="fas fa-chart-line" style="color:#10b981;"></i>
+                            <span>XGBoost</span>
+                        </div>
+                        <div class="skill-item" data-category="ml-data">
+                            <i class="fas fa-table" style="color:#150458;"></i>
+                            <span>Pandas</span>
+                        </div>
+                        <div class="skill-item" data-category="ml-data">
+                            <i class="fas fa-calculator" style="color:#013243;"></i>
+                            <span>NumPy</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Core CS Category Card -->
+                <div class="skill-category-card glass-panel" data-category-group="core-cs">
+                    <h3 class="skill-category-title">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Core Foundations</span>
+                    </h3>
+                    <div class="skills-tags-list">
+                        <div class="skill-item" data-category="core-cs">
+                            <i class="fas fa-stream"></i>
+                            <span>Data Structures &amp; Algorithms</span>
+                        </div>
+                        <div class="skill-item" data-category="core-cs">
+                            <i class="fas fa-project-diagram"></i>
+                            <span>DBMS</span>
+                        </div>
+                        <div class="skill-item" data-category="core-cs">
+                            <i class="fas fa-cubes"></i>
+                            <span>OOPs</span>
+                        </div>
+                        <div class="skill-item" data-category="core-cs">
+                            <i class="fas fa-microchip"></i>
+                            <span>Computer Architecture</span>
+                        </div>
+                        <div class="skill-item" data-category="core-cs">
+                            <i class="fas fa-network-wired"></i>
+                            <span>Computer Networks</span>
+                        </div>
+                        <div class="skill-item" data-category="core-cs">
+                            <i class="fas fa-desktop"></i>
+                            <span>Operating Systems</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools Category Card -->
+                <div class="skill-category-card glass-panel" data-category-group="tools">
+                    <h3 class="skill-category-title">
+                        <i class="fas fa-tools"></i>
+                        <span>Tools &amp; Platforms</span>
+                    </h3>
+                    <div class="skills-tags-list">
+                        <div class="skill-item" data-category="tools">
+                            <i class="fab fa-git-alt" style="color:#f1502f;"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="skill-item" data-category="tools">
+                            <i class="fab fa-figma" style="color:#a259ff;"></i>
+                            <span>Figma</span>
+                        </div>
+                        <div class="skill-item" data-category="tools">
+                            <i class="fas fa-cloud-upload-alt" style="color:#2563eb;"></i>
+                            <span>Vercel</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Experience Timeline -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-title-container">
+                <h2 class="section-title">Professional <span class="cyan-text">Experience</span></h2>
+                <p class="section-subtitle">Guided instruction, campus governance, and activities coordination.</p>
+            </div>
+
+            <div class="timeline">
+                <!-- Timeline Item 1: TA -->
+                <div class="timeline-item">
+                    <div class="timeline-node"></div>
+                    <div class="timeline-content-card glass-panel">
+                        <div class="timeline-header">
+                            <div class="timeline-title">
+                                <h3>Teaching Assistant</h3>
+                                <span class="company">IIIT Sri City</span>
+                            </div>
+                            <span class="timeline-date-badge">Jan 2026 — May 2026</span>
+                        </div>
+                        <ul class="timeline-bullets">
+                            <li>Guided junior students in Computer Architecture laboratory sessions covering data representation, floating-point operations, and Bomb Lab analysis.</li>
+                            <li>Assisted students in debugging low-level programs and understanding system-level concepts through practical exercises.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2: SLC Member -->
+                <div class="timeline-item">
+                    <div class="timeline-node"></div>
+                    <div class="timeline-content-card glass-panel">
+                        <div class="timeline-header">
+                            <div class="timeline-title">
+                                <h3>Student Life Council Member</h3>
+                                <span class="company">IIIT Sri City</span>
+                            </div>
+                            <span class="timeline-date-badge">2025 — Present</span>
+                        </div>
+                        <ul class="timeline-bullets">
+                            <li>Coordinated student activities related to mess, sports, hostel, and campus engagement initiatives.</li>
+                            <li>Assisted in organizing campus events and supporting communication between students and administration.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-title-container">
+                <h2 class="section-title">Academic <span class="cyan-text">Projects</span></h2>
+                <p class="section-subtitle">Realized software architectures and high-accuracy machine learning implementations.</p>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 1: DineTime Restaurant -->
+                <div class="project-card glass-panel">
+                    <div class="project-body">
+                        <div class="project-label">Full Stack Project</div>
+                        <h3 class="project-title">Restaurant Reservation &amp; Capacity Management Platform</h3>
+                        <p class="project-desc">A full-stack platform designed to efficiently manage restaurant reservations and real-time seating operations.</p>
+                        
+                        <ul style="padding-left: 20px; color: var(--text-dim); margin-bottom: 15px; font-size: 0.95rem; font-weight: 400; line-height: 1.65;">
+                            <li>Developing a full-stack platform to manage restaurant reservations and real-time seating operations.</li>
+                            <li>Implemented live table availability tracking and automated reservation lifecycle management.</li>
+                            <li>Designed role-based dashboards for customers, staff, and administrators with distinct workflows.</li>
+                        </ul>
+
+                        <div class="project-tech-list">
+                            <span class="project-tech-pill">NestJS</span>
+                            <span class="project-tech-pill">TypeScript</span>
+                            <span class="project-tech-pill">JavaScript</span>
+                            <span class="project-tech-pill">HTML</span>
+                            <span class="project-tech-pill">CSS</span>
+                        </div>
+
+                        <div class="project-actions">
+                            <a href="https://github.com/IIIT-Sricity-FSD-2024-2028/21_DineTime-Devs" target="_blank" class="project-btn">
+                                <i class="fab fa-github"></i>
+                                <span>Code Repository</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Air Quality Imputation -->
+                <div class="project-card glass-panel">
+                    <div class="project-body">
+                        <div class="project-label">Machine Learning</div>
+                        <h3 class="project-title">Air Quality Missing Value Imputation using ML</h3>
+                        <p class="project-desc">A machine learning project built to impute missing air quality values across 39 CPCB monitoring stations using spatiotemporal feature engineering.</p>
+                        
+                        <ul style="padding-left: 20px; color: var(--text-dim); margin-bottom: 15px; font-size: 0.95rem; font-weight: 400; line-height: 1.65;">
+                            <li>Built machine learning models for imputing missing air quality values across 39 CPCB monitoring stations using spatiotemporal feature engineering on 2.7M+ observations.</li>
+                            <li>Engineered temporal lag features and spatial nearest-station averages using KNN-based mapping techniques.</li>
+                            <li>Developed Random Forest and XGBoost models using multiple feature configurations for pollutant prediction.</li>
+                            <li>Achieved R² up to 0.93 through 5-fold cross-validation and concentration-wise analysis.</li>
+                        </ul>
+
+                        <div class="project-tech-list">
+                            <span class="project-tech-pill">Python</span>
+                            <span class="project-tech-pill">Scikit-learn</span>
+                            <span class="project-tech-pill">XGBoost</span>
+                            <span class="project-tech-pill">Pandas</span>
+                            <span class="project-tech-pill">NumPy</span>
+                        </div>
+
+                        <div class="project-actions">
+                            <a href="https://github.com/Nagavarshith07/-Air-quality-imputation" target="_blank" class="project-btn">
+                                <i class="fab fa-github"></i>
+                                <span>Code Repository</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title-container">
+                <h2 class="section-title">Get In <span class="cyan-text">Touch</span></h2>
+                <p class="section-subtitle">Let's discuss systems engineering, software design, or ML pipelines.</p>
+            </div>
+
+            <div class="contact-layout">
+                <!-- Info cards block -->
+                <div class="contact-info-block">
+                    <div class="contact-intro-card glass-panel">
+                        <p>I am actively seeking software engineering internships and collaborative projects. Feel free to shoot an email or reach out through my social links. I respond promptly!</p>
+                    </div>
+
+                    <div class="contact-details-grid">
+                        <!-- Detail 1: Email -->
+                        <div class="contact-detail-item glass-panel">
+                            <div class="contact-detail-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-detail-text">
+                                <h4>Email Address</h4>
+                                <a href="mailto:nagavarshith731@gmail.com">nagavarshith731@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <!-- Detail 2: Phone -->
+                        <div class="contact-detail-item glass-panel">
+                            <div class="contact-detail-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-detail-text">
+                                <h4>Contact Number</h4>
+                                <p>+91 7569441109</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social grid block -->
+                <div class="socials-dashboard-grid">
+                    <!-- GitHub Link -->
+                    <a href="https://github.com/Nagavarshith07" target="_blank" class="social-dashboard-card glass-panel">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                        <p class="username">@Nagavarshith07</p>
+                    </a>
+
+                    <!-- LinkedIn Link -->
+                    <a href="https://www.linkedin.com/in/naga-varshith-dongari-03844a385/" target="_blank" class="social-dashboard-card glass-panel">
+                        <i class="fab fa-linkedin-in"></i>
+                        <span>LinkedIn</span>
+                        <p class="username">Naga Varshith Dongari</p>
+                    </a>
+
+                    <!-- LeetCode Link -->
+                    <a href="https://leetcode.com/u/Eqw44xxWFU/" target="_blank" class="social-dashboard-card glass-panel">
+                        <i class="fas fa-code"></i>
+                        <span>LeetCode</span>
+                        <p class="username">@Eqw44xxWFU</p>
+                    </a>
+
+                    <!-- Resume Quick Link Card -->
+                    <a href="Varshith_resume.pdf" download="Varshith_resume.pdf" class="social-dashboard-card glass-panel" style="border-color: rgba(37,99,235,0.3); background: rgba(37,99,235,0.02);">
+                        <i class="fas fa-file-pdf" style="background:var(--gradient-primary); -webkit-background-clip:text; -webkit-text-fill-color:transparent;"></i>
+                        <span class="gradient-text">Download Resume</span>
+                        <p class="username">Varshith_resume.pdf</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Action Button for instant Resume PDF fetch -->
+    <div class="floating-action-container">
+        <div class="fab-pulse"></div>
+        <a href="Varshith_resume.pdf" download="Varshith_resume.pdf" class="fab-btn" aria-label="Download Resume PDF" title="Download Resume PDF">
+            <i class="fas fa-file-pdf"></i>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <span class="footer-brand">VARSHITH<span>.DEV</span></span>
+            <p>&copy; 2026 Dongari Naga Varshith. All rights reserved.</p>
+            <p>Designed and built with <span class="heart-pulsing">❤️</span> using clean semantic HTML5, CSS3, and JavaScript.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Controller Links -->
+    <script src="script.js"></script>
+</body>
+</html>
